@@ -106,6 +106,8 @@ function moveButton() {
 }
 
 noBtn.addEventListener("mouseover", moveButton);
+noBtn.addEventListener("touchstart", moveButton);
+noBtn.addEventListener("touchmove", moveButton);
 
 document.getElementById("yesBtn").addEventListener("click", () => {
     window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLScIvFRL0gNQ8cxEc9EqeLFJr01l_ap1BWtgxUUYQCZ3mRsB5Q/viewform?usp=publish-editor";
