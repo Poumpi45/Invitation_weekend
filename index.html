@@ -97,6 +97,9 @@ button {
 const noBtn = document.getElementById("noBtn");
 
 function moveButton() {
+	
+    noBtn.style.width = noBtn.offsetWidth + "px";
+    noBtn.style.height = noBtn.offsetHeight + "px";
     const maxX = window.innerWidth - noBtn.offsetWidth - 20;
     const maxY = window.innerHeight - noBtn.offsetHeight - 20;
 
