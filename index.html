@@ -41,9 +41,11 @@ h1 {
 }
 
 .buttons {
-    position: relative;
-    height: 120px;
+    display: flex;
+    justify-content: space-around;  /* Les deux boutons espacés automatiquement */
+    align-items: center;
     margin-top: 30px;
+    height: 60px;
 }
 
 button {
@@ -56,10 +58,9 @@ button {
 }
 
 #yesBtn {
-	position: absolute;
+    position: static;  /* Plus de position absolute */
     background: #28a745;
     color: white;
-    left: 15%;
 }
 
 #yesBtn:hover {
@@ -67,10 +68,9 @@ button {
 }
 
 #noBtn {
-    position: absolute;
+    position: static;  /* Plus de position absolute */
     background: #dc3545;
     color: white;
-    right: 15%;
     top: 0;
 }
 </style>
