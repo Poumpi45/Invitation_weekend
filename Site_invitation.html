@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposition d'un week-end</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+	
+	background-image: url("Image/Fond.jpg");
+    background-size: cover;      /* Remplit tout l'écran */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	
+    overflow: hidden;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 600px;
+}
+
+h1 {
+    color: #d63384;
+}
+
+.buttons {
+    position: relative;
+    height: 120px;
+    margin-top: 30px;
+}
+
+button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#yesBtn {
+	position: absolute;
+    background: #28a745;
+    color: white;
+    left: 80px;
+    margin-right: 20px;
+}
+
+#yesBtn:hover {
+    transform: scale(1.05);
+}
+
+#noBtn {
+    position: absolute;
+    background: #dc3545;
+    color: white;
+    left: 400px;
+    top: 0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Proposition d'un week-end</h1>
+
+    <p>
+        Accepterais-tu de partir en week-end avec Olympe ?
+	<br>
+	<i> Et avec moi aussi 🥺</i>
+    </p>
+
+    <div class="buttons">
+        <button id="yesBtn">✅ Oui</button>
+        <button id="noBtn">❌ Non</button>
+    </div>
+</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+
+function moveButton() {
+    const maxX = window.innerWidth - noBtn.offsetWidth - 20;
+    const maxY = window.innerHeight - noBtn.offsetHeight - 20;
+
+    const x = Math.random() * maxX;
+    const y = Math.random() * maxY;
+
+    noBtn.style.position = "fixed";
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+}
+
+noBtn.addEventListener("mouseover", moveButton);
+
+document.getElementById("yesBtn").addEventListener("click", () => {
+    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLScIvFRL0gNQ8cxEc9EqeLFJr01l_ap1BWtgxUUYQCZ3mRsB5Q/viewform?usp=publish-editor";
+});
+</script>
+
+</body>
+</html>
