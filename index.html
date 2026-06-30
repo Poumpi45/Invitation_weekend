@@ -100,18 +100,25 @@ const noBtn = document.getElementById("noBtn");
 const yesBtn = document.getElementById("yesBtn");
 
 
-function fixYesBtn() {
-    const rect = yesBtn.getBoundingClientRect();
+function fixButtons() {
+    const yesRect = yesBtn.getBoundingClientRect();
+    const noRect = noBtn.getBoundingClientRect();
+
     yesBtn.style.position = "fixed";
-    yesBtn.style.left = rect.left + "px";
-    yesBtn.style.top = rect.top + "px";
-    yesBtn.style.width = rect.width + "px";
-    yesBtn.style.height = rect.height + "px";
+    yesBtn.style.left = yesRect.left + "px";
+    yesBtn.style.top = yesRect.top + "px";
+    yesBtn.style.width = yesRect.width + "px";
+    yesBtn.style.height = yesRect.height + "px";
+
+    noBtn.style.position = "fixed";
+    noBtn.style.left = noRect.left + "px";
+    noBtn.style.top = noRect.top + "px";
+    noBtn.style.width = noRect.width + "px";
+    noBtn.style.height = noRect.height + "px";
 }
 
-// On attend que la page mobile soit stabilisée (barre d'adresse, etc.)
 window.addEventListener("load", () => {
-    setTimeout(fixYesBtn, 100);
+    setTimeout(fixButtons, 100);
 });
 
 /*const rect = yesBtn.getBoundingClientRect();
