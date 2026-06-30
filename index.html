@@ -123,13 +123,13 @@ function moveButton() {
 noBtn.addEventListener("mouseover", moveButton);
 noBtn.addEventListener("touchstart", moveButton);
 
-document.addEventListener("touchmove", function(e) {
+/*document.addEventListener("touchmove", function(e) {
   const touch = e.touches[0];
   const elementUnder = document.elementFromPoint(touch.clientX, touch.clientY);
   if (elementUnder === noBtn || noBtn.contains(elementUnder)) {
     moveButton();
   }
-}, { passive: true });
+}, { passive: true });*/
 
 document.getElementById("yesBtn").addEventListener("click", () => {
     window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLScIvFRL0gNQ8cxEc9EqeLFJr01l_ap1BWtgxUUYQCZ3mRsB5Q/viewform?usp=publish-editor";
